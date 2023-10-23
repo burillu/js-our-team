@@ -36,30 +36,34 @@ const ourTeam = [
 const divRow = document.getElementById('cardsRow');
 //console.log( ourTeam);
 // stampo le cards
-printCards()
-
-
+for (let index = 0; index < ourTeam.length; index++) {
+    const element = ourTeam[index];
+    printCards(element);
+}
+//prendo il bottone sign-in
+const btnSign = document.getElementById('btn-add');
+btnSign.addEventListener('click', catchInput);
 
 
 /********************************************************************************************** */
 // FUNZIONI
 
 // funzione che stampa le cards a schermo
-function printCards() {
+function printCards(element) {
 
-    for (let index = 0; index < ourTeam.length; index++) {
-        const element = ourTeam[index];
-        const divCol = document.createElement('div');
-        divCol.classList.add('col');
 
-        let name = element.name;
-        //console.log(index + " " + name);
-        let role = element.role;
-        //console.log(index + " " + role);
-        let picture = element.picture;
-        console.log(index + " " + picture)
-        //console.log('***********************');
-        const template = `<div class="card my-card">
+    
+    const divCol = document.createElement('div');
+    divCol.classList.add('col');
+
+    let name = element.name;
+    //console.log(index + " " + name);
+    let role = element.role;
+    //console.log(index + " " + role);
+    let picture = element.picture;
+    //console.log(index + " " + picture)
+    //console.log('***********************');
+    const template = `<div class="card my-card">
 <img src="img/${picture}" class="card-img-top" alt="${name}">
 <div class="card-body">
   <h5 class="card-title">${name} </h5>
@@ -67,10 +71,24 @@ function printCards() {
   
 </div>
 </div>`;
-divCol.innerHTML= template;
-divRow.append(divCol);
-    }
-    
+    divCol.innerHTML = template;
+    divRow.append(divCol);
 
+
+
+}
+
+//cattura input
+function catchInput(){
+    //const inputCollect = document.getElementsByName('photo');
+    //console.dir(inputCollect[0].value);
+    const newTeamPartner={
+        name : document.getElementsByName('name')[0].value,
+        role: document.getElementsByName('role')[0].value,
+        picture:'paquito-navarro.jpg'
+    }
+    ourTeam.push(newTeamPartner);
+    printCards(newTeamPartner);
+    return newTeamPartner;
 }
 

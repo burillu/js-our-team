@@ -1,32 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Michele Ebau">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Michele Ebau">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-    <title>Our Team</title>
+  <title>Our Team</title>
 </head>
+
 <body>
 
   <div class="container">
     <h1 class="text-center fs-4 py-3">Our Team</h1>
-    <p class="text-center my-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus temporibus ipsum similique iusto alias minima assumenda rerum unde ullam laboriosam cumque, earum quas placeat quis incidunt, fuga aperiam, culpa ab!</p>
-    <div class="row gy-5" id="cardsRow">
+    <p class="text-center my-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus temporibus ipsum
+      similique iusto alias minima assumenda rerum unde ullam laboriosam cumque, earum quas placeat quis incidunt, fuga
+      aperiam, culpa ab!</p>
+    <!-- cards container -->
+    <div class="row gy-5 my-4" id="cardsRow">
 
-      
-      
+
+
     </div>
+
+    <!-- add a new team-partner -->
+
+    <form>
+      <h4>Add a New Team Partner</h4>
+      <div class="row mb-3">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="role" class="col-sm-2 col-form-label">Role</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="role" name="role">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="photo" class="col-sm-2 col-form-label">Photo</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="photo" name="photo">
+        </div>
+        <!-- <div class="input-group">
+  <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+</div> -->
+
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col-sm-10 offset-sm-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <label class="form-check-label" for="gridCheck1">
+              I agree
+            </label>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" id="btn-add">Sign in</button>
+    </form>
+
+
+
+
   </div>
   <script src="js/utility.js"></script>
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
