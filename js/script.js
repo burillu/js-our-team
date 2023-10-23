@@ -33,4 +33,14 @@ const ourTeam = [
     },
 ]
 
-console.log( ourTeam);
+//console.log( ourTeam);
+for (let index = 0; index < ourTeam.length; index++) {
+    const element = ourTeam[index];
+    let name = element.name;
+    console.log(index+" "+ name);
+    let role = element.role;
+    console.log(index + " " + role);
+    let picture = element.picture;
+    console.log(index +" "+  picture)   
+    console.log('***********************'); 
+}
