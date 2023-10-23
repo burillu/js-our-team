@@ -1,3 +1,9 @@
+myOurTeam()
+
+function myOurTeam(){
+
+
+
 // creo oggetto
 
 const ourTeam = [
@@ -66,8 +72,8 @@ function printCards(element) {
     const template = `<div class="card my-card">
 <img src="img/${picture}" class="card-img-top" alt="${name}">
 <div class="card-body">
-  <h5 class="card-title">${name} </h5>
-  <p class="card-text">${role}</p>
+  <h5 class="card-title text-capitalize">${name} </h5>
+  <p class="card-text text-capitalize">${role}</p>
   
 </div>
 </div>`;
@@ -92,3 +98,6 @@ function catchInput(){
     return newTeamPartner;
 }
 
+
+
+}
